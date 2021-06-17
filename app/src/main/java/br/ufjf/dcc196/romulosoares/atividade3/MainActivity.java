@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText editTextValor2;
     private TextView textViewResultadoFinal;
     private Button buttonSomar;
+    private Button buttonSubtrair;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         editTextValor2 = findViewById(R.id.editTextValor2);
         textViewResultadoFinal = findViewById(R.id.textViewResultadoFinal);
         buttonSomar = findViewById(R.id.buttonSomar);
+        buttonSubtrair = findViewById(R.id.buttonSubtrair);
 
         //Quando o botão for clicado ele chama a função de somar
         buttonSomar.setOnClickListener(new View.OnClickListener() {
@@ -33,6 +35,15 @@ public class MainActivity extends AppCompatActivity {
                 somar(v);
             }
         });
+
+        //Quando o botão for clicado ele chama a função de somar
+        buttonSubtrair.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                subtrair(v);
+            }
+        });
+
 
     }
 
@@ -51,6 +62,26 @@ public class MainActivity extends AppCompatActivity {
 
         //Executa a soma dos valores
         valorTotal = valor1 + valor2;
+
+        //Passa o valor obtido para a tela
+        textViewResultadoFinal.setText(Double.toString(valorTotal));
+    }
+
+    //Função para subtrair
+    public void subtrair(View view){
+        //Define as variaveis para armazenar os valores passados
+        double valor1 = 0.0;
+        double valor2 = 0.0;
+        double valorTotal;
+
+        //Valida caso o dado inserido editText seja nulo
+        try{
+            valor1 = Double.parseDouble(editTextValor1.getText().toString());
+            valor2 = Double.parseDouble(editTextValor2.getText().toString());
+        } catch (Exception ignored) {}
+
+        //Executa a soma dos valores
+        valorTotal = valor1 - valor2;
 
         //Passa o valor obtido para a tela
         textViewResultadoFinal.setText(Double.toString(valorTotal));

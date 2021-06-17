@@ -88,11 +88,11 @@
         android:text="Resultado Final"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonsubtracao"
+        app:layout_constraintStart_toEndOf="@+id/buttonSubtrair"
         app:layout_constraintTop_toBottomOf="@+id/editTextValor2" />
 
     <Button
-        android:id="@+id/buttonsubtracao"
+        android:id="@+id/buttonSubtrair"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
@@ -103,7 +103,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextValor2" />
 
     <Button
-        android:id="@+id/buttonMultiplicacao"
+        android:id="@+id/buttonMultiplicar"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
@@ -112,12 +112,12 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonSomar" />
 
     <Button
-        android:id="@+id/buttonDivisao"
+        android:id="@+id/buttonDividir"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
         android:text="/"
-        app:layout_constraintStart_toStartOf="@+id/buttonsubtracao"
-        app:layout_constraintTop_toBottomOf="@+id/buttonsubtracao" />
+        app:layout_constraintStart_toStartOf="@+id/buttonSubtrair"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSubtrair" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
