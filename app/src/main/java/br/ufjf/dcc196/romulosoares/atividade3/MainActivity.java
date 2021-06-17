@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         textViewResultadoFinal.setText(Double.toString(valorTotal));
     }
 
-    //Função para subtrair
+    //Função para multiplicar
     public void multiplicar(View view){
         //Define as variáveis para armazenar os valores passados
         double valor1 = 0.0;
@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
         textViewResultadoFinal.setText(Double.toString(valorTotal));
     }
 
-    //Função para subtrair
+    //Função para dividir
     public void dividir(View view){
         //Define as variáveis para armazenar os valores passados
         double valor1 = 0.0;
