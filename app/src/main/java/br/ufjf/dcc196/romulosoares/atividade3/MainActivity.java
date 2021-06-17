@@ -32,39 +32,39 @@ public class MainActivity extends AppCompatActivity {
         buttonMultiplicar = findViewById(R.id.buttonMultiplicar);
         buttonDividir = findViewById(R.id.buttonDividir);
 
-        //Quando o botão for clicado ele chama a função de somar
-        buttonSomar.setOnClickListener(new View.OnClickListener() {
+        //Ouvinte para os botões
+        View.OnClickListener ouvinteButton = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                somar(v);
+                switch (v.getId()) {
+                    case R.id.buttonSomar:
+                        somar(v);
+                        break;
+                    case R.id.buttonSubtrair:
+                        subtrair(v);
+                        break;
+                    case R.id.buttonMultiplicar:
+                        multiplicar(v);
+                        break;
+                    case R.id.buttonDividir:
+                        dividir(v);
+                        break;
+                    default:
+                }
             }
-        });
+        };
+
+        //Quando o botão for clicado ele chama a função de somar
+        buttonSomar.setOnClickListener(ouvinteButton);
 
         //Quando o botão for clicado ele chama a função de subtrair
-        buttonSubtrair.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                subtrair(v);
-            }
-        });
+        buttonSubtrair.setOnClickListener(ouvinteButton);
 
         //Quando o botão for clicado ele chama a função de multiplicar
-        buttonMultiplicar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                multiplicar(v);
-            }
-        });
+        buttonMultiplicar.setOnClickListener(ouvinteButton);
 
         //Quando o botão for clicado ele chama a função de dividir
-        buttonDividir.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dividir(v);
-            }
-        });
-
-
+        buttonDividir.setOnClickListener(ouvinteButton);
 
     }
 
